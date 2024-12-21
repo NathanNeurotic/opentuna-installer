@@ -12,19 +12,19 @@ EE_LIBS = -ldebug -lcdvd -lpatches -lpadx -lmc
 all:
 	$(MAKE) $(EE_BIN_PACKED)
 ldrfmcbdcopy_icn.s:
-	bin2s INSTALL/LDR_FMCBD-1.966/COPY.ICN ldrfmcbdcopy_icn.s ldrfmcbdcopy_icn
+	bin2s INSTALL/LDR_FMCBD-1.953/COPY.ICN ldrfmcbdcopy_icn.s ldrfmcbdcopy_icn
 
 ldrfmcbddel_icn.s:
-	bin2s INSTALL/LDR_FMCBD-1.966/DEL.ICN ldrfmcbddel_icn.s ldrfmcbddel_icn
+	bin2s INSTALL/LDR_FMCBD-1.953/DEL.ICN ldrfmcbddel_icn.s ldrfmcbddel_icn
 
 ldrfmcbdfmcb_icn.s:
-	bin2s INSTALL/LDR_FMCBD-1.966/FMCB.ICN ldrfmcbdfmcb_icn.s ldrfmcbdfmcb_icn
+	bin2s INSTALL/LDR_FMCBD-1.953/FMCB.ICN ldrfmcbdfmcb_icn.s ldrfmcbdfmcb_icn
 
 ldrfmcbdicon_sys.s:
-	bin2s INSTALL/LDR_FMCBD-1.966/ICON.SYS ldrfmcbdicon_sys.s ldrfmcbdicon_sys
+	bin2s INSTALL/LDR_FMCBD-1.953/ICON.SYS ldrfmcbdicon_sys.s ldrfmcbdicon_sys
 
 ldrfmcbdtitle_cfg.s:
-	bin2s INSTALL/LDR_FMCBD-1.966/TITLE.CFG ldrfmcbdtitle_cfg.s ldrfmcbdtitle_cfg
+	bin2s INSTALL/LDR_FMCBD-1.953/TITLE.CFG ldrfmcbdtitle_cfg.s ldrfmcbdtitle_cfg
 
 title_cfg.s:
 	bin2s INSTALL/BOOT/TITLE.CFG title_cfg.s title_cfg
@@ -39,7 +39,7 @@ esr_elf.s:
 	bin2s INSTALL/BOOT/ESR.ELF esr_elf.s esr_elf
 
 fmcbd_elf.s:
-	bin2s INSTALL/LDR_FMCBD-1.966/FMCBD-1.966.ELF fmcbd_elf.s fmcbd_elf
+	bin2s INSTALL/LDR_FMCBD-1.953/FMCBD-1.953.ELF fmcbd_elf.s fmcbd_elf
 
 boot2_elf.s:
 	bin2s INSTALL/BOOT/BOOT2.ELF boot2_elf.s boot2_elf
