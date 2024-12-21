@@ -359,7 +359,7 @@ static int install(int mcport, int icon_variant)
 	}
    sprintf(temp_path,"mc%u:BOOT", mcport);
 	   DeleteFolder(temp_path);
-   sprintf(temp_path,"mc%u:LDR_FMCBD-1.966", mcport);
+   sprintf(temp_path,"mc%u:LDR_FMCBD-1.953", mcport);
 	   DeleteFolder(temp_path);
    sprintf(temp_path,"mc%u:SYS_FMCBCFG", mcport);
 	   DeleteFolder(temp_path);
@@ -407,7 +407,7 @@ DeleteFolder(temp_path);
 	mcSync(0, NULL, &ret);
 	ret = mcMkDir(mcport, 0, "BOOT");
 	mcSync(0, NULL, &ret);
-	ret = mcMkDir(mcport, 0, "LDR_FMCBD-1.966");
+	ret = mcMkDir(mcport, 0, "LDR_FMCBD-1.953");
 	mcSync(0, NULL, &ret);
 	ret = mcMkDir(mcport, 0, "SYS_FMCBCFG");
 	mcSync(0, NULL, &ret);
@@ -454,7 +454,7 @@ DeleteFolder(temp_path);
     {
         return 6;
     }
-    retorno = write_embed(&fmcbd_elf, size_fmcbd_elf, "LDR_FMCBD-1.966", "FMCBD-1.966.ELF", mcport);
+    retorno = write_embed(&fmcbd_elf, size_fmcbd_elf, "LDR_FMCBD-1.953", "FMCBD-1.953.ELF", mcport);
     if (retorno < 0)
     {
         return 6;
@@ -560,27 +560,27 @@ DeleteFolder(temp_path);
     {
         return 6;
     }
-    retorno = write_embed(&ldrfmcbdtitle_cfg, size_ldrfmcbdtitle_cfg, "LDR_FMCBD-1.966", "title.cfg", mcport);
+    retorno = write_embed(&ldrfmcbdtitle_cfg, size_ldrfmcbdtitle_cfg, "LDR_FMCBD-1.953", "title.cfg", mcport);
     if (retorno < 0)
     {
         return 6;
     }
-    retorno = write_embed(&ldrfmcbdicon_sys, size_ldrfmcbdicon_sys, "LDR_FMCBD-1.966", "icon.sys", mcport);
+    retorno = write_embed(&ldrfmcbdicon_sys, size_ldrfmcbdicon_sys, "LDR_FMCBD-1.953", "icon.sys", mcport);
     if (retorno < 0)
     {
         return 6;
     }
-    retorno = write_embed(&ldrfmcbdfmcb_icn, size_ldrfmcbdfmcb_icn, "LDR_FMCBD-1.966", "FMCB.icn", mcport);
+    retorno = write_embed(&ldrfmcbdfmcb_icn, size_ldrfmcbdfmcb_icn, "LDR_FMCBD-1.953", "FMCB.icn", mcport);
     if (retorno < 0)
     {
         return 6;
     }
-    retorno = write_embed(&ldrfmcbddel_icn, size_ldrfmcbddel_icn, "LDR_FMCBD-1.966", "del.icn", mcport);
+    retorno = write_embed(&ldrfmcbddel_icn, size_ldrfmcbddel_icn, "LDR_FMCBD-1.953", "del.icn", mcport);
     if (retorno < 0)
     {
         return 6;
     }
-    retorno = write_embed(&ldrfmcbdcopy_icn, size_ldrfmcbdcopy_icn, "LDR_FMCBD-1.966", "copy.icn", mcport);
+    retorno = write_embed(&ldrfmcbdcopy_icn, size_ldrfmcbdcopy_icn, "LDR_FMCBD-1.953", "copy.icn", mcport);
     if (retorno < 0)
     {
         return 6;
