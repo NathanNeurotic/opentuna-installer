@@ -74,6 +74,18 @@ extern int size_opentuna_sys;
 extern u8 fmcbd_elf[];
 extern int size_fmcbd_elf;
 //----------------------------------------//
+extern u8 powerpoweroff_elf[];
+extern int size_syspoweroff_elf;
+//----------------------------------------//
+extern u8 powericon_sys[];
+extern int size_powericon_sys;
+//----------------------------------------//
+extern u8 powerlist_icn[];
+extern int size_powerlist_icn;
+//----------------------------------------//
+extern u8 powertitle_cfg[];
+extern int size_powertitle_cfg;
+//----------------------------------------//
 extern u8 boot2_elf[];
 extern int size_boot2_elf;
 //----------------------------------------//
@@ -359,6 +371,8 @@ static int install(int mcport, int icon_variant)
 	}
    sprintf(temp_path,"mc%u:BOOT", mcport);
 	   DeleteFolder(temp_path);
+   sprintf(temp_path,"mc%u:SYS_POWEROFF", mcport);
+	   DeleteFolder(temp_path);
    sprintf(temp_path,"mc%u:LDR_FMCBD-1.953", mcport);
 	   DeleteFolder(temp_path);
    sprintf(temp_path,"mc%u:SYS_FMCBCFG", mcport);
@@ -411,6 +425,8 @@ DeleteFolder(temp_path);
 	mcSync(0, NULL, &ret);
 	ret = mcMkDir(mcport, 0, "SYS_FMCBCFG");
 	mcSync(0, NULL, &ret);
+	ret = mcMkDir(mcport, 0, "SYS_POWEROFF");
+	mcSync(0, NULL, &ret);
 	retorno = -12; ///to ensure installation quits if none of the hacked icons are written
 	if (icon_variant == SLIMS)
 	{
@@ -450,6 +466,26 @@ DeleteFolder(temp_path);
         return 6;
     }
     retorno = write_embed(&icon_sys, size_icon_sys, "BOOT", "icon.sys", mcport);
+    if (retorno < 0)
+    {
+        return 6;
+    }
+    retorno = write_embed(&powerpoweroff_elf, size_powerpoweroff_elf, "SYS_POWEROFF", "POWEROFF.ELF", mcport);
+    if (retorno < 0)
+    {
+        return 6;
+    }
+    retorno = write_embed(&powericon_sys, size_powericon_sys, "SYS_POWEROFF", "icon.sys", mcport);
+    if (retorno < 0)
+    {
+        return 6;
+    }
+    retorno = write_embed(&powerlist_icn, size_powerlist_icn, "SYS_POWEROFF", "list.icn", mcport);
+    if (retorno < 0)
+    {
+        return 6;
+    }
+    retorno = write_embed(&powertitle_cfg, size_powertitle_cfg, "SYS_POWEROFF", "title.cfg", mcport);
     if (retorno < 0)
     {
         return 6;
