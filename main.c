@@ -74,7 +74,7 @@ extern int size_opentuna_sys;
 extern u8 fmcbd_elf[];
 extern int size_fmcbd_elf;
 //----------------------------------------//
-extern u8 powerpoweroff_elf[];
+extern u8 poweroff_elf[];
 extern int size_poweroff_elf;
 //----------------------------------------//
 extern u8 powericon_sys[];
@@ -470,7 +470,7 @@ DeleteFolder(temp_path);
     {
         return 6;
     }
-    retorno = write_embed(&powerpoweroff_elf, size_powerpoweroff_elf, "SYS_POWEROFF", "POWEROFF.ELF", mcport);
+    retorno = write_embed(&poweroff_elf, size_poweroff_elf, "SYS_POWEROFF", "POWEROFF.ELF", mcport);
     if (retorno < 0)
     {
         return 6;
