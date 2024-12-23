@@ -75,7 +75,7 @@ extern u8 fmcbd_elf[];
 extern int size_fmcbd_elf;
 //----------------------------------------//
 extern u8 powerpoweroff_elf[];
-extern int size_syspoweroff_elf;
+extern int size_poweroff_elf;
 //----------------------------------------//
 extern u8 powericon_sys[];
 extern int size_powericon_sys;
