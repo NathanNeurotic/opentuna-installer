@@ -1,5 +1,5 @@
 CNF_version = 3
-LK_auto_E1 = mc:/LDR_FMCBD-1.966/FMCBD-1.966.ELF
+LK_auto_E1 = mc:/LDR_FMCBD-1.953/FMCBD-1.953.ELF
 LK_Circle_E1 = mc:/APP_OPL/OPL.ELF
 LK_Cross_E1 = MISC/FileBrowser
 LK_Square_E1 = mc:/APP_GSM/GSM.ELF
@@ -10,7 +10,7 @@ LK_L2_E1 = mc:/BOOT/ESR.ELF
 LK_R2_E1 = MISC/OSDSYS
 LK_L3_E1 = MISC/Debug Info
 LK_R3_E1 = MISC/PS2PowerOff
-LK_Start_E1 = mc:/LDR_FMCBD-1.966/FMCBD-1.966.ELF
+LK_Start_E1 = mc:/LDR_FMCBD-1.953/FMCBD-1.953.ELF
 LK_Select_E1 = MISC/Configure
 Misc = MISC/
 Misc_PS2Disc = PS2Disc
